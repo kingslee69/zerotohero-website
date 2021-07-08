@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>ZerotoHero Learning Platform</title>
+</head>
+<body>
+    <nav>
+        <div class="container nav-links">
+            <div >
+                <a href="./index.html"><img src="./images/Zerotohero logo.svg" alt="Zerotohero logo" class="logo"></a>
+                <img class="nav-menu" src="./images/menu.svg" alt="menu button" onclick="showNav()">
+            </div>
+            <ul class="disappear" id="main-nav" >
+                <li><a href="./workshops.html" onclick="hideMainNav()">Workshops</a></li>
+                <li><a href="#" onclick="hideMainNav()">Forum</a></li>
+                <li><a href="./login.html" onclick="hideMainNav()">Login</a></li>
+                <li><a href="./signup.html" onclick="hideMainNav()"><button class="btn btn-accent">Sign up</button></a></li>
+                <li><img src="./images/Profile Icon.svg" class="profile" id="profile" alt="profile button" onclick="onProfileClick()"></li>
+            </ul>
+        </div>
+    </nav>
+    </nav>
+     <div class="container profile-nav" id="profile-nav">
+        <ul class="profile-links" onclick="hideProfileNav()">
+            <li> <a href="./edit-profile.html">edit profile</a></li>
+            <li><a href="./saved.html">Saved Workshop</a></li>
+            <li><a href="./enrolled.html">Enrolled Workshop</a></li>
+            <li><a href="./logout.html">Log out</a></li>
+        </ul>
+    </div>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-write-up">
+                <h1>A Better Way to Learn Online</h1>
+                <p>Learn under supervision of the tutors and interact with the teachers on equal footing.</p>
+                <!-- <a href="./signup.html"><button class="btn btn-md btn-accent">There’s More</button></a> -->
+            </div>
+            <img src="./images/Zerotohero Student.png" alt="Zerotohero Student" class="hero-img">
+        </div>
+    </section>
+
+
+    <!-- About Section Begins Here -->
+    <p class="hero-header">Why ZerotoHero?</p>
+    <section class="about-section container">
+        <div class= "about-component">
+            <div class="about">
+                <h3>Learn New Skills</h3>
+                <p>Have access to learning life changing and high paying skills.</p>
+            </div>
+                <img class="about-img" src="./images/Learn skills.png" alt="Learn New Skills">
+        </div>
+
+        <div class= "about-component">
+            <div class="about">
+                <h3>Encourage Interaction</h3>
+                <p>Learn under supervision of the tutors and interact with the teachers on equal footing.</p>
+            </div>
+                <img class="about-img" src="./images/Encourage Interaction.png" alt="Encourage Interaction">
+        </div>
+
+        <div class= "about-component">
+            <div class="about">
+                <h3>Convenience</h3>
+                <p>Join and learn from anywhere and anytime around the globe.</p>
+            </div>
+                <img class="about-img" src="./images/Convenience.png" alt="Convenience">
+        </div>
+
+        <div class= "about-component">
+            <div class="about">
+                <h3>Network</h3>
+                <p>Meet People with similar interest and skill.</p>
+            </div>
+                <img class="about-img" src="./images/Network.png" alt="Network">
+        </div>
+    </section>
+
+    <!-- Here comes the workshop section -->
+    <p class="hero-header">Looking for a New Skill to Learn?</p>
+    <p class="text-body text-center">Choose from our list of workshops to enroll.</p>
+
+    <section class= "workshop-list ">
+        <div class="workshop">
+            <article class="workshop-description">
+                <p class="workshop-date">28th July, 2021</p>
+                <h3 class="workshop-title">WordPress for Beginners: Create a Website without Code Step by Step</h3>
+                <p class="workshop-subtitle">Create websites and blogs with zero experience using wordpress. Create websites and blogs with zero experience using wordpress.</p>
+                <div class="save-workshop badge saved">saved</div>
+            </article>
+            <div class="workshop-img">
+                <img src="./images/workshop image 3.jpg" alt="workshop-img">
+                <div class="img-overlay">
+                    <button class="btn workshop-btn">Enroll</button>
+                </div>
+            </div>
+        </div>
+        <a href="./workshops.html"><button class="btn btn-md btn-accent">There’s More</button></a>
+    </section>
+
+    
+    <p class="hero-header">Hear What Others Say About our Solution</p>
+    <p class="text-body text-center">Join the list of happy students.</p>
+    <div class="testimonial-div"></div>
+    <section class="testimonial-section">
+
+        <div class="container testimonial-list">
+            <div class="testimonial">
+                <img class="" src="./images/workshop image 1.png" alt="">
+                <article>
+                    <div>
+                        <p class="name">Name Surname</p>
+                        <p class="username">@username</p>
+                    </div>
+                    <p>Praesent dictum accumsan lorem sit amet dapibus. Suspendisse lacinia quam eros, sit amet dapibus.</p>
+                </article>
+            </div>
+            <div class="testimonial">
+                <img class="" src="./images/workshop image 1.png" alt="">
+                <article>
+                    <div>
+                        <p class="name">Name Surname</p>
+                        <p class="username">@username</p>
+                    </div>
+                    <p>Praesent dictum accumsan lorem sit amet dapibus. Suspendisse lacinia quam eros, sit amet dapibus.</p>
+                </article>
+            </div>
+            <div class="testimonial">
+                <img class="" src="./images/workshop image 1.png" alt="">
+                <article>
+                    <div>
+                        <p class="name">Name Surname</p>
+                        <p class="username">@username</p>
+                    </div>
+                    <p>Praesent dictum accumsan lorem sit amet dapibus. Suspendisse lacinia quam eros, sit amet dapibus.</p>
+                </article>
+            </div>
+            <div class="testimonial">
+                <img class="" src="./images/workshop image 1.png" alt="">
+                <article>
+                    <div>
+                        <p class="name">Name Surname</p>
+                        <p class="username">@username</p>
+                    </div>
+                    <p>Praesent dictum accumsan lorem sit amet dapibus. Suspendisse lacinia quam eros, sit amet dapibus.</p>
+                </article>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Finally the footer -->
+    <footer>
+        <h1>Stay Connected</h1>
+        <div>
+            <p>@zerotohero</p>
+            <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="./images/facebook.png" alt="facebook"></a>
+        </div>
+    </footer>
+
+    
+    <script src="./index.js">
+
+    </script>
+</body>
+</html>

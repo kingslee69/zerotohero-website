@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white : #ffffff;
+    --background : #F9FBFD;
+    --brand: #007BFF;
+    --hero-dark : #1B2A4D;
+    --hero-text: #66728B;
+    --secondary-text: #869AB8;
+    --hero-accent: #E82A91;
+    --hero-background: #E5F4FF;
+    --cream-background: #F7F8F0;
+    --grey: #F0F3F6;
+    --footer: #313131;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background) !important;
+}
+
+
+.container {
+    max-width: 886px !important;
+    margin: auto;
+}
+
+nav {
+    background-color: var(--white);
+    color:var(--hero-text);
+    font-weight: 500;
+}
+
+.nav-links {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul {
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: .5rem;
+    text-decoration: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+    font-weight: 500;
+    transition: .5s all ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+}
+
+.nav-menu {
+    display: none;
+}
+
+/* The profile nav styles */
+.profile-nav {
+    position: relative;
+    top: .5rem;
+    color: var(--hero-text);
+
+    display:none;
+}
+
+.profile-links{
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    right: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041);
+}
+    
+.profile-links  li{
+    display: block;
+    line-height: 200%;
+    padding: 2px 0;
+    
+}
+
+.profile-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+}
+
+.profile-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+    
+
+}
+
+.profile {
+    cursor: pointer;
+}
+
+
+/* button style */
+.btn {
+    border-radius: 2rem !important;
+    font-weight: 500 !important;
+    opacity: .9;
+}
+
+.btn:hover {
+    font-weight: 500;
+    opacity: 1;
+}
+
+.btn-accent {
+    background-color: var(--hero-accent);
+    color: var(--white) !important;
+}
+
+/* Styling for Edit Profile page starts here */
+.profile-img-container {
+    max-width: 450px;
+    height: 270px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.profile-img-container > img {
+    width: 450px;
+    height: 270px;
+    object-fit: cover !important;
+}
+
+.profile-img-overlay {
+    position: absolute;
+    background-image: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.profile-img-overlay > img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041);
+}
+
+.profile-input {
+    max-width: 450px;
+    margin: auto;
+}
+
+
+
+
+/* Saved webinar styling starts here */
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 200px auto;
+    column-gap: 1rem;
+}
+
+.side-nav {
+    color: var(--hero-text);
+}
+
+.nav-item {
+    background-color: var(--white);
+    display: flex;
+}
+
+.nav-item > div {
+    width: 5px;
+    background-color: var(--hero-background);
+}
+
+.nav-item > a {
+    color: var(--hero-text);
+    padding: .6rem;
+    margin: 0 !important;
+    text-decoration: none;
+    width:100%;
+}
+
+.nav-item > a:hover {
+    background-color: var(--grey);
+    color:var(--hero-text) !important;
+    text-decoration: none;
+}
+
+.active-item > div {
+    background-color: var(--brand);
+}
+
+.active-item > a {
+    font-weight: medium;
+    background-color: var(--hero-background);
+}
+
+
+.page-body {
+    /* background-color: var(--white); */
+    min-height: 35rem;
+}
+
+.center {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-body > h3 {
+    color: var(--hero-text);
+    /* text-align: center; */
+}
+
+
+/* Styling for Info-Divs */
+.info-div {
+    background-color: var(--cream-background);
+    color: var(--hero-text);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info-div h5, .info-div p {
+    margin-bottom: 1rem;
+}
+
+.info-div p {
+    font-size: 14px;
+}
+
+.info-div button {
+    margin-bottom: 1rem;
+    background-color: #EDEEE6;
+    color: var(--hero-accent);
+    margin-bottom: 0 !important;
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.info-disappear {
+        display: none;
+    }
+
+/* Styling for Log Out-Divs */
+.logout-div {
+    background-color: var(--white);
+    color: var(--hero-text) !important;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 30rem;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09);
+}
+
+.logout-div h5, .logout-div p {
+    margin: 1rem;
+}
+
+.logout-div p {
+    font-size: 14px;
+}
+
+.logout-div button {
+    color: var(--hero-text);
+    margin: 0 1rem !important;
+    
+}
+
+.info-disappear {
+        display: none;
+    }
+
+/********************************************************
+
+STYLING FOR THE WORKSHOP LIST 
+
+*********************************************************/
+.workshop-list {
+    padding: 1rem;
+    padding-top: 0;
+    text-align: center;
+
+}
+
+.workshop {
+    height: 380px;
+    max-width: 690px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    border-radius: 8px;
+
+    display: flex;
+
+    position: relative;
+    transition: .3s all ease-in-out;
+}
+
+
+.workshop:hover .workshop-img > img {
+    transform: scale(1.07);
+}
+
+.workshop:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041)
+}
+
+.workshop-description {
+    max-width: 345px;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 280px;
+
+    text-align: left;
+}
+
+.workshop-date {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.workshop-title {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+.workshop-subtitle {
+    font-size: 14px;
+}
+
+.save-workshop {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+
+    background-color: var(--grey);
+    display: block !important;
+}
+
+.saved {
+    background-color: var(--brand) !important;
+    color: var(--white) !important;
+}
+
+
+.workshop-btn {
+    border: 2px solid var(--white) !important;
+    background-color: transparent;
+    color: var(--white);
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    margin: 1rem;
+}
+
+.workshop-btn:hover {
+    border-color: var(--brand) !important;
+    background-color: var(--brand);
+    color: var(--white) !important;
+
+    transition: .3s ease-in-out;
+}
+
+.enrolled{
+    border-color: var(--brand) !important;
+    background-color: var(--brand);
+    color: var(--white) !important;
+
+    transition: .3s ease-in-out;
+}
+
+
+
+.workshop-img {
+    width: 345px;
+    height: 380px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    position: relative;
+    /* border: 3px solid var(--hero-dark) */
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 345px;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.img-overlay {
+    position: absolute;
+    background-image: linear-gradient( transparent, black);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Styling for the Workshop Enrollment Page */
+.workshop-header-div {
+    width: 100%;
+    height: 300px;
+    overflow: none;
+    padding: 0 !important;
+
+    position: relative;
+}
+.workshop-header-div > img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+.workshop-header-div > div{
+    position: absolute;
+
+    background-image: linear-gradient(  #aa437a7e, #2c5f8aaf);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--white)
+
+}
+
+.black {
+    background-color: #0000001c;
+}
+
+.workshop-header-div .title,  .workshop-header-div .subtitle{
+    max-width: 650px;
+    text-align: center;
+}
+
+/* Workshop-details     */
+
+.enrollment-grid {
+    display: grid;
+    grid-template-columns: auto 280px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--hero-text);
+}
+
+.workshop-details {
+    line-height: 180%;
+    max-width: 450px;
+}
+
+.course-feature-head {
+    min-height: 10px;
+    min-width: 100px;
+    /* background-color: var(--hero-accent); */
+    background-image: linear-gradient(to right,  #2699FB, #F54FA9);
+}
+
+.enrollment-grid li {
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    padding: .7rem;
+    background-color: var(--grey) !important;
+}
+
+.enrollment-grid li > span {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.article-section {
+    padding: 2rem 4rem !important;
+    color: var(--hero-text);
+    line-height: 180%;
+    background-color: var(--grey);
+}
+
+.article-section > h2 {
+    margin-bottom: 2rem;
+}
+
+.yellow-stripe {
+    background-color: var(--cream-background) !important;
+    
+}
+.yellow-stripe p {
+    max-width: 629px;
+    /* color: var(--hero-text); */
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 180%;
+}
+.stripe p {
+    max-width: 629px;
+    /* color: var(--hero-text); */
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 180%;
+}
+
+.light-section {
+    background-color: transparent;
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: 219px 443px;
+    grid-column-gap: 2rem;
+}
+
+.instructor-grid img {
+    height:219px;
+    width: 219px;
+    object-fit: cover;
+}
+
+.bold {
+    font-weight: bold ;
+    
+}
+
+/* The payment Section styles */
+.payment-section {
+    min-height: 600px;
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+ 
+.payment-section > p {
+    color: var(--white);
+    position: absolute;
+    font-size: 14px;
+    bottom: 4.5rem;
+    cursor:pointer;
+}
+
+.payment-card {
+    background-color: var(--white);
+    height: 320px;
+    width: 240px;
+    text-align: center;
+    color: var(--footer);
+
+    border-radius:1rem ;
+    position: relative;
+
+    transition: all .3s ease-in-out;
+    padding-top: .5rem !important;
+}
+
+.payment-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.233), 0 6px 20px 0 rgba(17, 17, 17, 0.24);
+}
+
+.payment-card h2 {
+    max-width: 200px;
+    margin: 2rem auto;
+    font-weight: bolder;
+}
+
+.payment-section > a {
+    
+    text-decoration: none;
+}
+.payment-section > a:hover {
+    
+    text-decoration: none;
+}
+
+.naira {
+    text-decoration-style: double;
+}
+
+#old-price {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.cta {
+    background-color: var(--hero-accent);
+    position: absolute;
+    bottom: 0;
+    width: 240px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 1.5rem 0;
+
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+/* Styling for footer */
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--hero-dark);
+    color: var(--hero-text)
+}
+
+footer > h1 {
+    font-family: 'Gentium Basic', serif;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer div> a {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+footer div> p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+.appear {
+    display: block;
+}
+
+@media only screen and (max-width: 667px) {
+
+    .logo {
+        margin: 1rem auto;
+    }
+   
+    .nav-links {
+        height: auto;
+        display: block;
+    }
+    .nav-links li {
+        display: block;
+        margin: 1rem auto;
+    }
+    
+    .nav-menu {
+        display: block;
+        float: right;
+        margin: 1rem auto;
+    }
+    
+    .disappear {
+        display: none;
+    }
+
+    /* The profile nav styles */
+    .profile-nav {
+        top: 0;
+    }
+
+    .profile {
+        margin-bottom: 1rem;
+    }
+    
+    .profile-links{
+        border-radius: 0;
+        padding: .5rem 3rem;
+        left: 0;
+        width: 100%;
+        
+    }
+
+    .profile-nav {
+        top: -1rem;
+    }
+
+    .profile-links  li{
+        display: block;
+        line-height: 220%;
+    }
+
+
+    /* Saved webinar styling starts here */
+.grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 1rem;
+}
+
+.side-nav {
+   display: none;
+}
+
+
+/* Workshop Styling starts here for mobile */
+
+.workshop {
+    height: auto;
+    max-width: 690px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workshop-img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+
+    order: -1;
+
+    position: relative;
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 100%;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.workshop-description {
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 100%;
+}
+
+.workshop-subtitle {
+    margin-bottom: 3rem;
+}
+
+/* Styling for Edit Profile page starts here */
+.profile-img-container {
+    max-width: 100%;
+    height: 270px;
+    overflow: hidden;
+
+    position: relative;
+     
+}
+
+.profile-img-container > img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover !important;
+}
+
+/* Styling for the Workshop Enrollment Page */
+.workshop-header-div {
+    width: 100%;
+    height: 450px;
+    overflow: none;
+    padding: 0 !important;
+
+    position: relative;
+}
+.workshop-header-div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+/* Workshop-details     */
+
+.enrollment-grid {
+    grid-template-columns: 100%;
+    grid-row-gap: 3rem;
+    margin-top: 2rem;
+}
+
+.workshop-details {
+    max-width: 100%;
+}
+
+
+.enrollment-grid li > span {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.article-section {
+    padding: 2rem !important;
+
+}
+
+/* Instructor's Section */
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+}

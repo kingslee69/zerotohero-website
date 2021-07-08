@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Enrollment Page</title>
+</head>
+<body>
+    <nav>
+        <div class="container nav-links">
+            <div >
+                <a href="./index.html"><img src="./images/Zerotohero logo.svg" alt="Zerotohero logo" class="logo"></a>
+                <img class="nav-menu" src="./images/menu.svg" alt="menu button" onclick="showNav()">
+            </div>
+            <ul class="disappear" id="main-nav" >
+                <li><a href="./workshops.html" onclick="hideMainNav()">Workshops</a></li>
+                <li><a href="#" onclick="hideMainNav()">Forum</a></li>
+                <li><a href="./login.html" onclick="hideMainNav()">Login</a></li>
+                <li><a href="./signup.html" onclick="hideMainNav()"><button class="btn btn-accent">Sign up</button></a></li>
+                <li><img src="./images/Profile Icon.svg" class="profile" id="profile" alt="profile button" onclick="onProfileClick()"></li>
+            </ul>
+        </div>
+    </nav>
+     <div class="container profile-nav" id="profile-nav">
+        <ul class="profile-links" onclick="hideProfileNav()">
+            <li> <a href="./edit-profile.html">edit profile</a></li>
+            <li><a href="./saved.html">Saved Workshop</a></li>
+            <li><a href="./enrolled.html">Enrolled Workshop</a></li>
+            <li><a href="./logout.html">Log out</a></li>
+        </ul>
+    </div>
+
+    <header class="workshop-header-div container">
+        <img src="./images/workshop image 3.jpg" alt="Workshop img">
+        <div class="black"></div>
+        <div>
+            <h1 class="title">The Complete Digital Marketing Course - 12 Courses in 1</h1>
+            <p class="subtitle">Master Digital Marketing Strategy, Social, Media Marketing, SEO, YouTube, Email, Facebook Marketing, Analytics & More.</p>
+            <button class="btn btn-accent">Enroll</button>
+        </div>
+    </header>
+
+    <section class="enrollment-grid container">
+        <article class="workshop-details">
+            <p>Donec feugiat ut lectus sed posuere. Aliquam erat volutpat. Vivamus sollicitudin arcu hendrerit erat ultrices, tristique dictum urna mattis. Nam sodales molestie tellus convallis aliquam. Curabitur dapibus dictum consectetur. Curabitur vel odio purus. Suspendisse eget dolor ut massa accumsan porta et sed ante. Morbi at nulla sed nunc tincidunt dapibus. Vestibulum et sapien et quam euismod mollis. Curabitur feugiat nec mi et laoreet. Fusce eros purus, tristique eu odio cursus, accumsan faucibus leo.
+
+            Donec feugiat ut lectus sed posuere. Aliquam erat volutpat. Vivamus sollicitudin arcu hendrerit erat ultrices, tristique dictum urna mattis. Nam sodales molestie tellus convallis aliquam. Curabitur dapibus dictum consectetur. Curabitur vel odio purus. Suspendisse eget dolor ut massa accumsan porta et sed ante. Morbi at nulla sed nunc tincidunt dapibus. Vestibulum et sapien et quam euismod mollis. Curabitur feugiat nec mi et laoreet. Fusce eros purus, tristique eu odio cursus, accumsan faucibus leo.</p>
+
+            <button class="btn btn-accent">Enroll</button>
+        </article>
+        <div>
+            <div class="course-feature-head"></div>
+            <ul>
+                <li><img src="./images/check 1.svg" alt=""><span>BEGINEER TO PRO</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>LIFETIME ACCESS</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>CHEAT SHEET</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>DOWNLOADABLE</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>ZERO FLUFF</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>INTERACT WITH TUTOR</span></li>
+                <li><img src="./images/check 1.svg" alt=""><span>CERTIFICATE</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container article-section">
+        <h2>Who is this Course made for?</h2>
+        <ol>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.ictum urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.ictum     
+     urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+        </ol>
+    </section>
+
+    <section class="container article-section light-section">
+        <h2>By the end of this course, you’ll be able to...</h2>
+        <ol>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.ictum urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+            <li>ictum urna mattis. Nam sodales molestie tellus convallis aliquam.ictum     
+     urna mattis. Nam sodales molestie tellus convallis aliquam.</li>
+        </ol>
+        <button class="btn btn-accent">Enroll</button>
+    </section>
+
+    <section class="container-fluid yellow-stripe">
+        <p>A perfectly-structured course packed with exercises, solutions, and a real project. Learn and understand the what's, why's and how's.</p>
+    </section>
+
+    <section class="container article-section light-section">
+        <h2>The Instructor</h2>
+
+        <div class="instructor-grid">
+            <img src="./images/workshop image 1.png" alt="image of the instructor">
+            <div>
+                <h4> Tutor’s Name </h4>
+                <p>
+                    Donec feugiat ut lectus sed posuere. Aliquam erat volutpat. Vivamus sollicitudin arcu hendrerit erat ultrices, tristique dictum urna mattis. Nam sodales molestie tellus convallis aliquam. Curabitur dapibus dictum consectetur. Curabitur vel odio purus. Suspendisse eget dolor ut massa accumsan porta et sed ante. Morbi at nulla sed nunc 
+                </p>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <section class="container-fluid stripe">
+        <p>No Prior Knowledge needed!</p>
+    </section>
+
+    <section class="container article-section light-section">
+        <h2>When will this workshop start and end?</h2>
+        <p>It starts on Monday <span class="bold">9th of November, 2020</span> and ends in <span class="bold">2 weeks</span> time. The venue for the webinar will be on <span class="bold">Telegram</span>. Enroll now to join us.</p>
+    </section>
+
+    <section class="payment-section">
+        <a href="">
+            <div class="payment-card">
+                <h2>Join the Workshop</h2>
+                <h1><del class="naira">N</del> <span id="new-price">8,000</span></h1>
+                <p id="old-price"><del class="naira">N</del>15,000</p>
+                <div class="cta">
+                    Buy now
+                </div>
+            </div>
+        </a>
+        <p>
+            I want to save this workshop and pay later
+        </p>  
+    </section>
+
+     <!-- Footer Section -->
+    <footer>
+        <h1>Stay Connected</h1>
+        <div>
+            <p>@zerotohero</p>
+            <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="./images/facebook.png" alt="facebook"></a>
+        </div>
+    </footer>
+        
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white : #ffffff;
+    --background : #F9FBFD;
+    --brand: #007BFF;
+    --hero-dark : #1B2A4D;
+    --hero-text: #66728B;
+    --secondary-text: #869AB8;
+    --hero-accent: #E82A91;
+    --hero-background: #E5F4FF;
+    --grey: #F0F3F6;
+    --footer: #313131;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background) !important;
+}
+
+
+.container {
+    max-width: 886px !important;
+    margin: auto;
+}
+
+.hero-header {
+    font-family: 'Gentium Basic', serif;
+    font-size: 40px;
+    color: var(--hero-text);
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 120%;
+
+    background-image: linear-gradient(40deg, #2699FB, #F54FA9);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent; 
+}
+
+.text-body {
+    color: var(--hero-text);
+}
+
+nav {
+    background-color: var(--white);
+    color:var(--hero-text);
+    font-weight: 500;
+}
+
+.nav-links {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul {
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: .5rem;
+    text-decoration: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+    font-weight: 500;
+    transition: .5s all ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+}
+
+.nav-menu {
+    display: none;
+}
+
+/* The profile nav styles */
+.profile-nav {
+    position: relative;
+    top: .5rem;
+    color: var(--hero-text);
+
+    display:none;
+}
+
+.profile-links{
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    right: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041);
+}
+    
+.profile-links  li{
+    display: block;
+    line-height: 200%;
+    padding: 2px 0;
+    
+}
+
+.profile-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+}
+
+.profile-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+    
+
+}
+
+.profile {
+    cursor: pointer;
+}
+.appear {
+
+    display: block;
+}
+
+
+/* button style */
+.btn {
+    border-radius: 2rem !important;
+    font-weight: 500 !important;
+    opacity: .9;
+}
+
+.btn:hover {
+    font-weight: 500;
+    opacity: 1;
+}
+
+.btn-accent {
+    background-color: var(--hero-accent);
+    color: var(--white)
+}
+
+/* Style for Hero Header */
+
+.hero {
+    height: 530px;
+    background-color: var(--brand);
+    transform: skewY(3deg);
+
+    position: relative;
+    top: -3rem;
+    z-index: -1;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: skewY(-3deg);
+   
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+
+.hero-write-up {
+    max-width: 380px !important;
+    z-index: 30 !important;
+}
+
+
+
+/* Style for About Section */
+.about-section {
+    color: var(--hero-text) !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1rem;
+
+}
+
+.about-component {
+    max-width: 410px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--hero-background);
+    border-radius: 10px;
+    padding-left: 1rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about {
+    max-width: 250px;
+    margin: 1rem;
+}
+
+.about-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: .3s all ease-in-out;
+    
+}
+
+.about-component:hover  .about-img{
+    transform: scale(1.07);
+
+}
+
+
+/********************************************************
+
+STYLING FOR THE WORKSHOP LIST 
+
+*********************************************************/
+.workshop-list {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.workshop {
+    height: 380px;
+    max-width: 690px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    border-radius: 8px;
+
+    display: flex;
+
+    position: relative;
+    transition: .3s all ease-in-out;
+}
+
+
+.workshop:hover .workshop-img > img {
+    transform: scale(1.07);
+}
+
+.workshop:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041)
+}
+
+.workshop-description {
+    max-width: 345px;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 280px;
+
+    text-align: left;
+}
+
+.workshop-date {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.workshop-title {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+.workshop-subtitle {
+    font-size: 14px;
+}
+
+.save-workshop {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+
+    background-color: var(--grey);
+    display: block !important;
+}
+
+.saved {
+    background-color: var(--brand) !important;
+    color: var(--white) !important;
+}
+
+
+.workshop-btn {
+    border: 2px solid var(--white) !important;
+    background-color: transparent;
+    color: var(--white);
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    margin: 1rem;
+}
+
+.workshop-btn:hover {
+    border-color: var(--brand) !important;
+    background-color: var(--brand);
+    color: var(--white) !important;
+
+    transition: .3s ease-in-out;
+}
+
+
+
+.workshop-img {
+    width: 345px;
+    height: 380px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    position: relative;
+    /* border: 3px solid var(--hero-dark) */
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 345px;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.img-overlay {
+    position: absolute;
+    background-image: linear-gradient( transparent, black);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* Style for Testimonial section */
+
+.testimonial-div {
+    height: 120px;
+    background-color: var(--grey);
+    transform: skewY(3deg);
+    
+    position: relative;
+    bottom: -3rem;
+    z-index: -3;
+}
+
+.testimonial-section {
+    background-color: var(--grey);
+    padding-bottom: 4rem;
+}
+
+.testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    overflow: none;
+
+}
+
+.testimonial {
+    max-width: 380px !important;
+    margin: 1rem auto;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: 1.2rem;
+
+    border: 2px dashed #C4C4C4;
+    padding: 1.5rem;
+
+    color: var(--hero-text);
+    background-color: var(--white);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041)
+    
+}
+
+.testimonial * {
+    line-height: 160%;
+    margin: 0;
+}
+
+.testimonial > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5rem;
+}
+
+.testimonial .name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.testimonial .username {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.testimonial > article >*:first-child {
+   margin-bottom: 1.5rem !important;
+}
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--hero-dark);
+    color: var(--hero-text)
+}
+
+footer > h1 {
+    font-family: 'Gentium Basic', serif;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer div> a {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+footer div> p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+@media (max-width: 665px) and (min-width: 360px) {
+    .hero-img {
+        position: relative;
+        top: -3rem;
+    }
+}
+
+@media (max-width: 665px) and (min-width: 480px) {
+    .hero-img {
+        max-width: 400px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 952px) {
+    .container {
+        padding: auto 2rem;
+    }
+
+    .hero-img {
+        height: 420px;
+    }
+
+    .hero {
+        height: 351px;
+    }
+
+    .hero-write-up {
+        margin-left: 2rem;
+    }
+
+   
+
+}
+
+
+
+/* Media query for mobile */
+
+@media only screen and (max-width: 667px) {
+
+    .logo {
+        margin: 1rem auto;
+    }
+   
+    .nav-links {
+        height: auto;
+        display: block;
+    }
+    .nav-links li {
+        display: block;
+        margin: 1rem auto;
+    }
+    
+    .nav-menu {
+        display: block;
+        float: right;
+        margin: 1rem auto;
+    }
+    
+    .disappear {
+        display: none;
+    }
+
+    /* The profile nav styles */
+    .profile-nav {
+        top: 0;
+    }
+
+    .profile {
+        margin-bottom: 1rem;
+    }
+    
+    .profile-links{
+        border-radius: 0;
+        padding: .5rem 3rem;
+        left: 0;
+        width: 100%;
+        
+    }
+
+    .profile-nav {
+        top: -1rem;
+    }
+
+    .profile-links  li{
+    display: block;
+    line-height: 220%;
+    
+}
+
+
+.hero-container {
+    flex-wrap: wrap;
+}
+
+.hero-img {
+        min-width: 200px;
+        height: auto;
+    }
+
+.hero-write-up {
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    min-height: 581px;
+}
+
+/* Workshop Styling starts here for mobile */
+
+.workshop {
+    height: auto;
+    max-width: 690px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workshop-img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+
+    order: -1;
+
+    position: relative;
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 100%;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.workshop-description {
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 100%;
+}
+
+.workshop-subtitle {
+    margin-bottom: 3rem;
+}
+
+}

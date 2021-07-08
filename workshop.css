@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white : #ffffff;
+    --background : #F9FBFD;
+    --brand: #007BFF;
+    --hero-dark : #1B2A4D;
+    --hero-text: #66728B;
+    --secondary-text: #869AB8;
+    --hero-accent: #E82A91;
+    --hero-background: #E5F4FF;
+    --grey: #F0F3F6;
+    --footer: #313131;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background) !important;
+}
+
+
+.container {
+    max-width: 886px !important;
+    margin: auto;
+}
+
+nav {
+    background-color: var(--white);
+    color:var(--hero-text);
+    font-weight: 500;
+}
+
+.nav-links {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul {
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: .5rem;
+    text-decoration: none;
+}
+.nav-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+    font-weight: 500;
+    transition: .5s all ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+}
+
+.nav-menu {
+    display: none;
+}
+
+/* The profile nav styles */
+.profile-nav {
+    position: relative;
+    top: .5rem;
+    color: var(--hero-text);
+
+    display:none;
+}
+
+.profile-links{
+    margin: 0;
+    padding: 0 1rem;
+    position: absolute;
+    right: 1rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041);
+}
+    
+.profile-links  li{
+    display: block;
+    line-height: 200%;
+    padding: 2px 0;
+    
+}
+
+.profile-links a {
+    text-decoration: none;
+    color:var(--hero-text);
+}
+
+.profile-links a:hover {
+    text-decoration: none;
+    color: var(--brand);
+    
+
+}
+
+.profile {
+    cursor: pointer;
+}
+
+
+/* button style */
+.btn {
+    border-radius: 2rem !important;
+    font-weight: 500 !important;
+    opacity: .9;
+}
+
+.btn:hover {
+    font-weight: 500;
+    opacity: 1;
+}
+
+.btn-accent {
+    background-color: var(--hero-accent);
+    color: var(--white)
+}
+
+
+/* the workshop header styling starts here */
+
+header {
+    margin-top: 0 !important;
+    background: url(./images/header-bg.svg);
+    color: var(--hero-text);
+    
+    height: 260px;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header > h1 {
+    Margin: 1rem;
+    color: var(--hero-dark);
+
+}
+
+header > p {
+    max-width: 500px;
+    text-align: center; 
+
+    line-height: 160%;
+}
+
+/* The Sorting and Searching Section Styling */
+
+.sorting-and-search {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: var(--brand);
+    font-weight: medium;
+}
+
+.btn-white {
+    background-color: var(--white);
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09);
+    }
+
+.sorting {
+    display: flex;
+    justify-content: flex-start;
+}
+    
+.search {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    
+}
+
+.search-input {
+    margin: 0 !important;
+    height: 40px;
+    padding-left: 15px;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    color: var(--hero-text) !important;
+}
+
+.search-btn {
+    background-color: var(--brand);
+    height: 40px;
+    margin: 0 !important;
+    padding-right: 2.5rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    width: 40px !important;
+}
+
+.categories, .author {
+    position: relative;
+}
+.dropdown-categories, .dropdown-authors {
+    position: absolute !important;
+    top: 1.8rem;
+    left: 2rem;
+}
+
+.dropdown {
+    min-width: 150px !important;
+    background-color: var(--white);
+    line-height: 180% !important;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09);
+    color: var(--hero-text);
+    z-index: 10;
+    display: none;
+}
+
+.dropdown li {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+   color: var(--brand)
+}
+
+.appear {
+    display: block;
+}
+
+
+/********************************************************
+
+STYLING FOR THE WORKSHOP LIST 
+
+*********************************************************/
+.workshop-list {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.workshop {
+    height: 380px;
+    max-width: 690px;
+    margin: 2rem auto;
+    background-color: var(--white);
+    border-radius: 8px;
+
+    display: flex;
+
+    position: relative;
+    transition: .3s all ease-in-out;
+}
+
+
+.workshop:hover .workshop-img > img {
+    transform: scale(1.07);
+}
+
+.workshop:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 20px 0 rgba(17, 17, 17, 0.041)
+}
+
+.workshop-description {
+    max-width: 345px;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 280px;
+
+    text-align: left;
+}
+
+.workshop-date {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.workshop-title {
+    margin-top: 2rem;
+    font-size: 20px;
+}
+
+.workshop-subtitle {
+    font-size: 14px;
+}
+
+.save-workshop {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+
+    background-color: var(--grey);
+    display: block !important;
+}
+
+.saved {
+    background-color: var(--brand) !important;
+    color: var(--white) !important;
+}
+
+
+.workshop-btn {
+    border: 2px solid var(--white) !important;
+    background-color: transparent;
+    color: var(--white);
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    margin: 1rem;
+}
+
+.workshop-btn:hover {
+    border-color: var(--brand) !important;
+    background-color: var(--brand);
+    color: var(--white) !important;
+
+    transition: .3s ease-in-out;
+}
+
+
+
+.workshop-img {
+    width: 345px;
+    height: 380px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    position: relative;
+    /* border: 3px solid var(--hero-dark) */
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 345px;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.img-overlay {
+    position: absolute;
+    background-image: linear-gradient( transparent, black);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Styling for footer */
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--hero-dark);
+    color: var(--hero-text)
+}
+
+footer > h1 {
+    font-family: 'Gentium Basic', serif;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer div> a {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+footer div> p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 667px) {
+
+    .logo {
+        margin: 1rem auto;
+    }
+   
+    .nav-links {
+        height: auto;
+        display: block;
+    }
+    .nav-links li {
+        display: block;
+        margin: 1rem auto;
+    }
+    
+    .nav-menu {
+        display: block;
+        float: right;
+        margin: 1rem auto;
+    }
+    
+    .disappear {
+        display: none;
+    }
+
+    /* The profile nav styles */
+    .profile-nav {
+        top: 0;
+    }
+
+    .profile {
+        margin-bottom: 1rem;
+    }
+    
+    .profile-links{
+        border-radius: 0;
+        padding: .5rem 3rem;
+        left: 0;
+        width: 100%;
+        
+    }
+
+    .profile-nav {
+        top: -1rem;
+    }
+
+    .profile-links  li{
+    display: block;
+    line-height: 220%;
+    }
+
+    /* Workshop Styling starts here for mobile */
+
+.workshop {
+    height: auto;
+    max-width: 690px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.workshop-img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+
+    order: -1;
+
+    position: relative;
+}
+
+.workshop-img > img {
+    transition: .5s all ease-in-out;
+    width: 100%;
+    height: 380px;
+    object-fit: cover !important;
+}
+
+.workshop-description {
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.workshop-description > * {
+    margin: 1rem;
+    line-height: 160%;
+    color:var(--hero-text);
+    max-width: 100%;
+}
+
+.workshop-subtitle {
+    margin-bottom: 3rem;
+}
+
+/* The Sorting and Searching Section Styling */
+
+.sorting-and-search {
+    margin-top: 2rem;
+    display: block;
+   
+}
+
+.sorting {
+    margin-left: 0 !important;
+}
+
+.search {
+    margin-top:1rem;
+}
+
+.search-input {
+    width: 100%;
+}
+
+}

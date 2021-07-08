@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Edit Profile</title>
+</head>
+<body>
+      <nav>
+        <div class="container nav-links">
+            <div >
+                <a href="./index.html"><img src="./images/Zerotohero logo.svg" alt="Zerotohero logo" class="logo"></a>
+                <img class="nav-menu" src="./images/menu.svg" alt="menu button" onclick="showNav()">
+            </div>
+            <ul class="disappear" id="main-nav" >
+                <li><a href="./workshops.html" onclick="hideMainNav()">Workshops</a></li>
+                <li><a href="#" onclick="hideMainNav()">Forum</a></li>
+                <li><a href="./login.html" onclick="hideMainNav()">Login</a></li>
+                <li><a href="./signup.html" onclick="hideMainNav()"><button class="btn btn-accent">Sign up</button></a></li>
+                <li><img src="./images/Profile Icon.svg" class="profile" id="profile" alt="profile button" onclick="onProfileClick()"></li>
+            </ul>
+        </div>
+    </nav>
+     <div class="container profile-nav" id="profile-nav">
+        <ul class="profile-links" onclick="hideProfileNav()">
+            <li> <a href="./edit-profile.html">edit profile</a></li>
+            <li><a href="./saved.html">Saved Workshop</a></li>
+            <li><a href="./enrolled.html">Enrolled Workshop</a></li>
+            <li><a href="./logout.html">Log out</a></li>
+        </ul>
+    </div>
+
+    <section class="grid container">
+        <div class="side-nav">
+            <div class='nav-item active-item'>
+                <div></div>
+                <a href="./edit-profile.html">Edit profile</a>
+            </div>
+            <div class='nav-item '>
+                <div></div>
+                <a href="./saved.html">Saved Workshops</a>
+            </div>
+            <div class='nav-item '>
+                <div></div>
+                <a href="./enrolled.html">Enrolled Workshops</a>
+            </div>
+            <div class='nav-item'>
+                <div></div>
+                <a href="./logout.html">Log out</a>
+            </div>
+        </div>
+
+        <div class="page-body profile-input">
+            <h3>My Profile</h3>
+             <!-- Here comes the profile -->
+            <div class="profile-img-container mx-auto">
+                 <img class="profile-img" src="./images/Profile-img.jpg" alt="User profile">
+                 <div class="profile-img-overlay"><img src="./images/image.svg" alt="change profile"></div>
+            </div>
+
+            <div class="form-group ">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter name">
+            </div>
+
+            <div class="form-group ">
+                    <label for="userName">Username</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Enter username">
+            </div>
+
+            <div class="form-group ">
+                    <label for="userEmail">Email</label>
+                    <!-- Email shouldnt be editable -->
+                    <!-- fetch the user info and display it on the input fields -->
+                    <input type="email" class="form-control" id="userEmail" placeholder="Enter email">
+            </div>
+
+           
+            <a href="./change-password.html">Change password?</a>
+           
+            <hr class=""/>
+
+             <div class="form-group  mt-4">
+                    <label for="userPassword">To save changes, please enter your current password</label>
+                    <input type="password" class="form-control" id="userPassword" placeholder="Enter password">
+            </div>
+
+             
+            <button class="btn btn-accent mb-4">Save changes</button>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <h1>Stay Connected</h1>
+        <div>
+            <p>@zerotohero</p>
+            <a href="#"><img src="./images/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="./images/facebook.png" alt="facebook"></a>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
